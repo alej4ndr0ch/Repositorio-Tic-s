@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane id="AnchorPane" prefHeight="750.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.alejandrocuxun.controllers.MenuCargosController">
+   <children>
+      <ImageView fitHeight="750.0" fitWidth="1200.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/MenuCargos.png" />
+         </image></ImageView>
+      <TextField fx:id="tfCargoId" layoutX="22.0" layoutY="237.0" prefHeight="30.0" prefWidth="278.0" />
+      <TableView fx:id="tblCargos" layoutX="416.0" layoutY="170.0" prefHeight="524.0" prefWidth="741.0">
+        <columns>
+          <TableColumn fx:id="colCargoId" prefWidth="228.0" text="Cargo Id" />
+          <TableColumn fx:id="colNombreCargo" prefWidth="281.0" text="Nombre Cargo" />
+            <TableColumn fx:id="colDescripcionCargo" prefWidth="231.0" text="Descripcion Cargo" />
+        </columns>
+      </TableView>
+      <GridPane layoutX="52.0" layoutY="293.0" prefHeight="389.0" prefWidth="278.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button fx:id="btnAgregar" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="115.0" prefWidth="240.0" text="Agregar" />
+            <Button fx:id="btnEditar" layoutX="10.0" layoutY="18.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="115.0" prefWidth="240.0" text="Editar" GridPane.rowIndex="1" />
+            <Button fx:id="btnEliminar" layoutX="10.0" layoutY="18.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="115.0" prefWidth="240.0" text="Eliminar" GridPane.rowIndex="2" />
+         </children>
+      </GridPane>
+      <Button fx:id="btnRegresar" layoutX="757.0" layoutY="705.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="25.0" prefWidth="389.0" text="Regresar" />
+      <TextField layoutX="467.0" layoutY="125.0" prefHeight="25.0" prefWidth="418.0" />
+      <Button fx:id="btnBuscar" layoutX="416.0" layoutY="120.0" mnemonicParsing="false" onAction="#handleButtonAction">
+         <graphic>
+            <ImageView fitHeight="26.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/lupa.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>

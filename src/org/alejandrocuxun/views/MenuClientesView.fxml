@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane id="AnchorPane" prefHeight="750.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.alejandrocuxun.controllers.MenuClientesController">
+   <children>
+      <ImageView fitHeight="750.0" fitWidth="1200.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/MenuClientesView.png" />
+         </image>
+      </ImageView>
+      <TableView fx:id="tblClientes" layoutX="24.0" layoutY="104.0" prefHeight="540.0" prefWidth="880.0">
+        <columns>
+          <TableColumn fx:id="colClienteId" prefWidth="61.0" text="ClienteId" />
+          <TableColumn fx:id="colNombre" prefWidth="179.0" text="Nombre" />
+            <TableColumn fx:id="colApellido" prefWidth="166.0" text="Apellido" />
+            <TableColumn fx:id="colTelefono" prefWidth="110.0" text="telefono" />
+            <TableColumn fx:id="colDireccion" prefWidth="283.0" text="Direccion" />
+            <TableColumn fx:id="colNit" text="NIT" />
+        </columns>
+      </TableView>
+      <GridPane layoutX="945.0" layoutY="178.0" prefHeight="438.0" prefWidth="215.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="79.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="79.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="79.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="79.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button fx:id="btnAgregar" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="88.0" prefWidth="192.0" text="Agregar" />
+            <Button fx:id="btnEditar" layoutX="10.0" layoutY="21.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="88.0" prefWidth="192.0" text="Editar" GridPane.rowIndex="1" />
+            <Button fx:id="btnEliminar" layoutX="10.0" layoutY="21.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="88.0" prefWidth="192.0" text="Eliminar" GridPane.rowIndex="2" />
+            <Button layoutX="10.0" layoutY="21.0" mnemonicParsing="false" prefHeight="88.0" prefWidth="192.0" text="Reporter" GridPane.rowIndex="3" />
+         </children>
+      </GridPane>
+      <GridPane layoutX="33.0" layoutY="666.0" prefHeight="56.0" prefWidth="133.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button fx:id="btnRegresar" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="49.0" prefWidth="159.0" text="Regresar" />
+         </children>
+      </GridPane>
+      <TextField fx:id="tfClienteId" layoutX="586.0" layoutY="60.0" prefHeight="26.0" prefWidth="261.0" promptText="ingresar el id del cliente a buscar" />
+      <Button fx:id="btnBuscar" layoutX="855.0" layoutY="57.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="32.0" prefWidth="41.0">
+         <graphic>
+            <ImageView fitHeight="150.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/lupa.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="btnFinalizarClientes" layoutX="393.0" layoutY="670.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="49.0" prefWidth="261.0" text="Finalizar Cliente" />
+   </children>
+</AnchorPane>
