@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane id="AnchorPane" prefHeight="750.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.alejandrocuxun.controllers.FormProductosController">
+   <children>
+      <ImageView fitHeight="750.0" fitWidth="500.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/FormProductos.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="tfProductoId" layoutX="53.0" layoutY="136.0" prefHeight="25.0" prefWidth="351.0" />
+      <TextField fx:id="tfNombreProducto" layoutX="53.0" layoutY="204.0" prefHeight="25.0" prefWidth="351.0" />
+      <TextField fx:id="tfDescripcionProducto" layoutX="53.0" layoutY="275.0" prefHeight="25.0" prefWidth="351.0" />
+      <TextField fx:id="tfPrecioVentaUnitaria" layoutX="14.0" layoutY="434.0" prefHeight="25.0" prefWidth="229.0" />
+      <TextField fx:id="tfPrecioVentaMayor" layoutX="257.0" layoutY="434.0" prefHeight="25.0" prefWidth="229.0" />
+      <TextField fx:id="tfPrecioCompra" layoutX="14.0" layoutY="512.0" prefHeight="25.0" prefWidth="229.0" />
+      <TextField fx:id="tfCantidadProducto" layoutX="14.0" layoutY="356.0" prefHeight="25.0" prefWidth="229.0" />
+      <GridPane layoutX="113.0" layoutY="566.0" prefHeight="140.0" prefWidth="240.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button fx:id="btnGuardar" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="87.0" prefWidth="112.0" text="Guardar" />
+            <Button fx:id="btnRegresar" layoutX="10.0" layoutY="37.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="87.0" prefWidth="112.0" text="Regresar" GridPane.columnIndex="1" />
+         </children>
+      </GridPane>
+      <ComboBox fx:id="cmbDistribuidorId" layoutX="257.0" layoutY="356.0" prefHeight="25.0" prefWidth="229.0" />
+      <ComboBox fx:id="cmbCategoriaProductoId" layoutX="257.0" layoutY="512.0" prefHeight="25.0" prefWidth="229.0" />
+   </children>
+</AnchorPane>
